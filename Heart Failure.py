@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 20 18:36:22 2023
-
-@author: Akrosh
-"""
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -14,7 +8,7 @@ from sklearn.preprocessing import MinMaxScaler
 from scipy.stats import chi2_contingency
 scale = MinMaxScaler()
 
-df=pd.read_csv("C:/Users\Akrosh\OneDrive - rit.edu\Desktop/heart_failure_clinical_records_dataset.csv")
+df=pd.read_csv("/heart_failure_clinical_records_dataset.csv")
 df.info()
 df.isna().sum()
 df['age'] = scale.fit_transform(df[['age']])
